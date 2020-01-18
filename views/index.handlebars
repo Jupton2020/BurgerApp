@@ -2,3 +2,40 @@
     <img src="/public/assets/img/PinClipart.com_cheeseburger-clip-art_2989169.png" alt="Burger" style="height: 100px;width:100px;">
 </div>
 <br>
+<h1 style="color: rgb(26, 199, 26); text-align: center; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Eat Da Burger!!!</h1>
+<br>
+<div class="container" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 15px; font-weight:bolder">
+<div class="row">
+    <div class="col">
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{> burger-block devoured=true}}
+        {{/unless}}
+        {{/each}}
+    </div>
+    <div class="col">
+        {{#each burgers}}
+        {{#if devoured}}
+        {{> burger-block devoured=false}}
+        {{/if}}
+        {{/each}}
+    </div>
+</div>
+</div>
+<br>
+<div style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; text-align:center">
+    <form class="create-form">
+        <div class="form-group">
+            <label for="ca"></label>
+            <input type="text" id="ca" name="name" style="height: 50px; width: 300px">
+        </div>
+        <div class="form-group" style="margin-top: -20px">
+            <label for="devoured"></label> <br>
+            <input type="radio" name="devoured" value="1" checked> Devoured! <br>
+            <input type="radio" name="devoured" value="0" > Not Eaten 
+        </div>
+        <button type="submit" style=" border-radius: 5px; color:whitesmoke; background-color:tomato; height: 40px; width: 150px">Click Here</button>
+    <div style="padding: 10px; font-size: 15px; margin-top: 10px">Type the name of a burger that you desire and CLICK.
+    </div>
+    </form>
+</div>
