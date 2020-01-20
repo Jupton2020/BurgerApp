@@ -9,7 +9,7 @@ Created a burger logging app with Handlebars, MySQL, Express, ORM, and Node.  
 This project was created using MySQL, Node, Express, Handlebars and a homemade ORM. Whenever a user submits a burger's name, your app will display the burger on the left side of the page, once "Devoured" it will display on the right side of the page. The user has the option to "Bring it Back" and devour the same burger as many times as they want. 
 
 ## Usage
-In the navbar, search " ", this is the app's address on HEROKU. 
+In the navbar, search "https://pure-everglades-19198.herokuapp.com/ ", this is the app's address on HEROKU. 
 
 
 ## Screenshot of "Devour It" burger functionality:
