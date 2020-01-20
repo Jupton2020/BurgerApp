@@ -47,7 +47,7 @@ var orm = {
         
         console.log(queryString);
 
-        connection.query(queryString, function (err, result) {
+        connection.query(queryString, vals, function (err, result) {
             if (err){
                 throw err;
             }
@@ -57,6 +57,7 @@ var orm = {
     },
     updateOne: function(table, objColVals, condition, cb){
         var queryString = "UPDATE " + table;
+
         queryString += " SET ";
         queryString +=  objToSql(objColVals);
         queryString += " WHERE ";
@@ -67,6 +68,7 @@ var orm = {
             if (err){
                 throw err;
             }
+            
             cb(result);
         });
 
